@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>you can sign in now</title>
+    </head>
+    <body>
+        <p id="output"></p>
+        <p id="output2"></p>
+        <input id="answer" type="text" placeholder="请输入内容">
+        <button onclick="showAnswer()">提交</button>
+        <script>
+        // 这里直接写 JavaScript
+        document.getElementById("output").textContent = "you can sign in now";
+        document.getElementById("output2").textContent = "东湖中学809有几个人？";
+        function showAnswer() {
+            const answer = document.getElementById("answer").value;
+            setTimeout(() => {document.getElementById("output").textContent = "正在验证中...";}, 2000);
+        if(answer === "51"){
+            window.location.href = "真正809.html";
+        }
+        else{
+            document.getElementById("output").textContent = "答案错误，请重新输入。";
+        }
+        }
+        
+        </script>
+    </body>
+</html>
